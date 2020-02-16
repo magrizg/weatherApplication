@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7IS-qS-cM3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="2XW-ll-a6o">
+            <objects>
+                <navigationController id="7IS-qS-cM3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xy6-Z5-w3e">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="d6j-GW-WSY" kind="relationship" relationship="rootViewController" id="eVo-mV-Ye8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TMr-bd-TGw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-484" y="-57"/>
+        </scene>
+        <!--Citylist View Controller-->
+        <scene sceneID="5rp-Cj-SXv">
+            <objects>
+                <viewController id="d6j-GW-WSY" customClass="CityListViewController" customModule="WeatherApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xts-ro-vAD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="p6T-Tk-Xxr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wuq-Ca-U4S"/>
+                    <connections>
+                        <segue destination="odZ-3o-Tii" kind="show" identifier="FromCityListToCityDescription" id="kK7-UB-Plw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aJB-HV-GiV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="V7l-BH-OrD" customClass="CityListModuleInitializer" customModule="WeatherApplication" customModuleProvider="target">
+                    <connections>
+                        <outlet property="citylistViewController" destination="d6j-GW-WSY" id="s77-0W-zkC"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="410" y="-58"/>
+        </scene>
+        <!--Citydescription View Controller-->
+        <scene sceneID="rkl-LX-1eo">
+            <objects>
+                <viewController id="odZ-3o-Tii" customClass="CityDescriptionViewController" customModule="WeatherApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wdT-UW-ffV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="5DI-tq-0wP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="X5U-p9-Dp8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sKU-tf-8UQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="ktQ-11-QQ0" customClass="CityDescriptionModuleInitializer" customModule="WeatherApplication" customModuleProvider="target">
+                    <connections>
+                        <outlet property="citydescriptionViewController" destination="odZ-3o-Tii" id="MnW-oc-cj6"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="1290" y="-54"/>
+        </scene>
+    </scenes>
+</document>

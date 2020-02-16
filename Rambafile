@@ -1,0 +1,24 @@
+### Headers settings
+company: mg
+
+### Xcode project settings
+project_name: WeatherApplication
+xcodeproj_path: WeatherApplication.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: WeatherApplication
+
+# The file path for new modules
+project_file_path : WeatherApplication/Classes/PresentationLayer/Modules
+
+# The file path for new modules
+project_group_path : WeatherApplication/Classes/PresentationLayer/Modules
+
+
+### Dependencies settings section
+podfile_path: Podfile
+
+### Templates
+templates:
+- {name: swifty_viper}
